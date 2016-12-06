@@ -167,7 +167,9 @@ def get_allow_origin(request):
     else:
         return settings['allow_origin']
 
-def log_json(data):
+def log_json(request, data):
+    data['clientIp'] = request.getClientIP()
+    data['userAgent'] = request.getHeader('User-Agent')
     if ('useraleVersion' in data) and (data ['useraleVersion'].split('.')[0] == '4'):
         logger_js.info(simplejson.dumps(data))
     elif ('useraleVersion' in data) and (data['useraleVersion'].split('.')[0] == '3'):
@@ -194,9 +196,9 @@ class Logger(Resource):
         try:
             if isinstance(data, list):
                 for datum in data:
-                    log_json(datum)
+                    log_json(request, datum)
             else:
-                log_json(data)
+                log_json(request, data)
         except Exception as e:
             logger_err.error(e)
 
