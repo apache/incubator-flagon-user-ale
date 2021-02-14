@@ -1,4 +1,12 @@
+![Maintenance](https://img.shields.io/maintenance/no/2019)
+[![deprecated](http://badges.github.io/stability-badges/dist/deprecated.svg)](http://github.com/badges/stability-badges)
+[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
+
 <img src="https://raw.githubusercontent.com/draperlaboratory/user-ale/gh-pages/img/user-ale-small.png"/>
+
+# Apache Flagon User-ALE (Incubating)
+
+Apache Flagon User-Ale is a deprecated product version and is no longer maintained. It will be retired soon. Find current Apache Flagon developments in user logging in our [UserALE.js](https://github.com/apache/incubator-flagon-useralejs) project.
 
 ##Background
 
